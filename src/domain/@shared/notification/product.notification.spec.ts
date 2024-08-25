@@ -1,5 +1,6 @@
 import Product from "../../product/entity/product";
 import Notification from "./notification";
+import NotificationError from "./notification.error";
 describe("Unit testss for notifications", () => {
     it("should create errors", () => {
       const notification = new Notification();
@@ -53,7 +54,6 @@ describe("Unit testss for notifications", () => {
   
       expect(notification.getErrors()).toEqual([error]);
     });
-
 
 
 
