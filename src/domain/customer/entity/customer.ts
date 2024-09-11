@@ -53,11 +53,11 @@ export default class Customer extends Entity {
   
     activate() {
       if (this._address === undefined) {
-        this.notification.addError({
+       /* this.notification.addError({
           context: "customer",
           message: "Address is mandatory to activate a customer"
-        });
-        //throw new Error("Address is mandatory to activate a customer");
+        });*/
+        throw new Error("Address is mandatory to activate a customer");
       }
       this._active = true;
     }
