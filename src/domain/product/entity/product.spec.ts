@@ -31,4 +31,11 @@ describe("Product unit tests", () => {
     product.changePrice(150);
     expect(product.price).toBe(150);
   });
+
+  //teste acumulado dois erros ao mesmo tempo
+  it("should throw error when name is and id are empty", () => {
+    expect(() => {
+      let product = new Product("", "", 3.5);
+    }).toThrowError("product: Id is required,product: Name is required");
+  });
 });
